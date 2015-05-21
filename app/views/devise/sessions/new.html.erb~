@@ -2,7 +2,7 @@
 	 <div class="row">
 		<div class="col-md-3 col-md-offset-4 panel panel-primary">
 			<div class="panel-body">
-					<div class="col-md-offset-3"><h1> Sign In</h1></div>
+					<div class="col-md-offset-3"><h1> Sign in</h1></div>
 						<div class="col-md-offset-2">
 						Don't have an account? 
 						<%- if devise_mapping.registerable? && controller_name != 'registrations' %>

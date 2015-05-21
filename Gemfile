@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'searchkick'
 gem "paperclip", "~> 4.2"
 
 gem 'devise'
