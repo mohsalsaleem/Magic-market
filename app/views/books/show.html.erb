@@ -1,24 +1,25 @@
 <div class="container">
 
 			<div class="row">
-				<div class="col-md-3 ">
+				<div class="col-md-3 col-md-offset-1">
 					<h2><%= @book.name %></h2>
 				</div>
 				
 			</div>
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-12 col-md-offset-1">
 					<em><%= @book.caption %></em>
+					
 				</div>
 				<br>
 				<br>
 			</div>
 	
 			<div class="row">
-				<div class="col-md-2">
-					<img src="http://ecx.images-amazon.com/images/I/51vN15YCJyL._SY344_BO1,204,203,200_.jpg" class="img-responsive" alt="<%= @book.name %>">
+				<div class="col-md-2 col-md-offset-1">
+					<%= image_tag @book.asset.url(:medium) %>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-3">
 					<dl class="dl-horizontal">
 					  <dt>Author</dt>
 					  <dd><%= @book.author %></dd>

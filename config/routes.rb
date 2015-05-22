@@ -8,6 +8,11 @@ Rails.application.routes.draw do
   resources :books
   root 'homepage#home'
   get 'search', to: 'search#search'
+  resources :search do
+	  collection do
+	    get :autocomplete
+	  end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
