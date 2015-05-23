@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-fixed-top" style="height:20px">
+<nav class="navbar navbar-default navbar-fixed-top nav_color" style="height:20px">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header page-scroll">
@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#page-top"><img class="img-responsive" alt="MagicMarket" style="height:20px" src="assets/magicmarket-logo.png" ></a>
+            <a class="navbar-brand" href="#page-top"><img class="img-responsive" alt="MagicMarket" style="height:60px" src="assets/pna.png" ></a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
