@@ -1,4 +1,35 @@
+.nav_color {
+	background-color: #49bfe3;
+}
+.blue_up {
+	display: block; height: 5px;
+    border: 0; border-top: 5px solid #49bfe3;
+    margin: 0em 0; padding: 0;
+}
+.halfwhite {
+	background-color: rgba(255, 255, 255, 0.5);
+	padding-bottom: 20px;
+}
+.fullwidth {
+	width:100%;
+}
+#featured {
+    background-image: url('secondimage.jpg'); 
+    padding-top: 0;
+}
+
+#about {
+    background-image: url('thirdimage.jpg');
+    padding-top: 0;
+}
+
+#contact {
+    background-image: url('fourthimage.jpg');
+    padding-top: 0;
+}
+
 .top-buffer { margin-top:40px; }
+.top-buffer-small { margin-top:20px; }
 /* HERE STARTS THE MAGIC */
 .bordered {
     outline: 1px solid white;
@@ -15,7 +46,7 @@ header {
     height: 100%;
     overflow: hidden;
     top: 0;
-    left: -10;
+    
 }
 
 .content-wrapper{
@@ -24,7 +55,8 @@ header {
     min-height: 12%;
     position:absolute;
     z-index: 2;
-    width: 100%;    
+    width: 100%;  
+    height: 90%;  
 }
 /* HERE ENDS THE MAGIC */
 header .container {
@@ -53,6 +85,7 @@ header .intro-text .skills {
 section {
     padding: 100px 0;    
     width: 100%;
+    height:  100%;
 }
 
 section h2 {
@@ -98,9 +131,7 @@ hr.star-primary:after {
     background-color: #fff;
 }
 
-section.primary h2{    
-    color: #2c3e50;
-    }
+
     
 section.success{
     background-color: #18bc9c;

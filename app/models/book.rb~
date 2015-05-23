@@ -1,6 +1,7 @@
 
 class Book < ActiveRecord::Base
-  searchkick autocomplete: ['title']
+  searchkick
+  searchkick autocomplete: ['name']
   has_attached_file :asset,
     :styles => {
       :thumb => "100x100#",
