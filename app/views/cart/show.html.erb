@@ -1,0 +1,13 @@
+<h1>Hello, <%=current_user.email%></h3><br>
+<h3>Your Cart has</h3>
+<% if @books.nil? %>
+	<h1>Nothing :-(</h1>
+<%else%>
+	<ul>
+		<% @books.each do |book| %>
+			<li><%=book.name%>----------- Rs.<%=book.mrp%></li>
+		<% end%>
+	</ul>
+<%end%>
+
+<h3>Total : Rs.<%=@total%></h3>

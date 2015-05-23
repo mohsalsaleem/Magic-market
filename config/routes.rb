@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
  
+  get 'cart/show'
+
   authenticate :admin do
  	 mount RailsAdmin::Engine => '/magic_market_admin', as: 'rails_admin'
   end
@@ -13,6 +15,7 @@ Rails.application.routes.draw do
 	    get :autocomplete
 	  end
   end
+  match 'add', to:'cart#add', via: [:post]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
