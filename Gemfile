@@ -1,12 +1,13 @@
 source 'https://rubygems.org'
 
+gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'searchkick'
 gem "paperclip", "~> 4.2"
 
 gem 'devise'
 gem 'rails_admin'
 
-gem 'bootstrap-sass', '~> 3.2.0.2'
+gem 'bootstrap-sass', '~> 3.3.4'
 gem 'autoprefixer-rails'
 
 gem 'elasticsearch-model'

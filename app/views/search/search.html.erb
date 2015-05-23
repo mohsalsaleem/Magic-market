@@ -19,12 +19,4 @@
   <% end %>
 </div>
 
-<ul>
-  <% @books.each do |book| %>
-    <li>
-      <h3>
-        <%= link_to book.name, controller: "books", action: "show", id: book._id%>
-      </h3>
-    </li>
-  <% end %>
-</ul>
+

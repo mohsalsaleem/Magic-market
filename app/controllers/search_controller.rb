@@ -8,8 +8,9 @@ class SearchController < ApplicationController
   end
   def autocomplete
     puts "in auto complete"
-    render json: Book.search(params[:query], autocomplete: true, limit: 10).map do |book|
+    render json: Book.search(params[:query], autocomplete: false, limit: 10).map do |book|
       { name: book.name, id: book._id }
+    puts "books"
     end
   end
 end

@@ -7,22 +7,47 @@
 	   </div>
 	   <div class="col-md-12"></div>
 	   <div class="col-md-12">	
-             <div id="custom-search-input">
-                            <div class="input-group col-md-12">
-                                <input type="text" class="  search-query form-control" placeholder="Need to bring search box here and load product details in a dropdown" />
-                                <span class="input-group-btn">
-                                    <button class="btn btn-danger" type="button">
-                                        <span class=" glyphicon glyphicon-search"></span>
-                                    </button>
-                                </span>
-                            </div>
-              </div>
-	   </div>
+            
+                            <div class="input-group">
+	
+				  <input type="text" class="form-control" placeholder="Search for books" aria-describedby="sizing-addon1">
+				  <span class="input-group-addon" id="sizing-addon2">.....<span class="glyphicon glyphicon-ok"></span></span>	
+			 </div>
+
+				
+				
+           </div>
+	   <div class="hidden-xs">
+	      <div class="col-md-2 col-md-offset-1 bordered top-buffer">
+			  <div class="col-md-3 col-md-offset-4 top-buffer"><img src="http://www.chegg.com/s/sohp/images/icn-cir-deals-48x48.png"></div>				
+			<div class="col-md-12">			  
+			<h4>Buy Used and New TextBooks<h4>
+			  <h6>Save upto 60% on TextBooks*</h6>
+			</div>
+			 <div class="col-md-3 col-md-offset-4 top-buffer"><a href="#featured"><img src="http://www.chegg.com/s/sohp/images/icn-cir-arrow-24x24.png"></a></div>				
+	      </div>	
+	      <div class="col-md-2 col-md-offset-1 bordered top-buffer">
+			  <div class="col-md-3 col-md-offset-4 top-buffer"><img src="http://www.chegg.com/s/sohp/images/icn-cir-cheggstudy-48x48.png"></div>				
+			<div class="col-md-12">			  
+			<h4>Sell your old books at your doorstep!<h4>
+			  <h6>And get instant cash*</h6>
+			</div>
+			 <div class="col-md-3 col-md-offset-4 top-buffer"><img src="http://www.chegg.com/s/sohp/images/icn-cir-arrow-24x24.png"></div>				
+	      </div>
+	      <div class="col-md-2 col-md-offset-1 bordered top-buffer">
+			  <div class="col-md-3 col-md-offset-4 top-buffer"><img src="http://www.chegg.com/s/sohp/images/icn-cir-cheggstudy-48x48.png"></div>				
+			<div class="col-md-12">			  
+			<h4>Look for the scholarships provided!<h4>
+			  <h6>See the scholarships provided Now!</h6>
+			</div>
+			 <div class="col-md-3 col-md-offset-4 top-buffer"><img src="http://www.chegg.com/s/sohp/images/icn-cir-arrow-24x24.png"></div>				
+	      </div>
+           </div>
         </div>
     </div>
 </header>
 <div class="content-wrapper">
-    <section class="primary" id="portfolio">
+    <section class="primary" id="featured">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -33,14 +58,9 @@
             <div class="row">
 		
                 <div class="col-sm-4">
-                    <img src="http://lorempixel.com/360/260/nature/">    
+                    <%= image_tag @books.asset.url(:medium) %>
                 </div>
-                <div class="col-sm-4">
-                    <img src="http://lorempixel.com/360/260/animals/">    
-                </div>
-                <div class="col-sm-4">
-                    <img src="http://lorempixel.com/360/260/abstract/">    
-                </div>
+		
             </div>
         </div>
     </section>
