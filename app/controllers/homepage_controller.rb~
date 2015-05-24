@@ -1,5 +1,5 @@
 class HomepageController < ApplicationController
 	def home
-		@books = Book.search featured: 'true'
+	#	@books = Book.find_by featured: 'true'
 	end
 end

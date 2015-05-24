@@ -1,5 +1,8 @@
 
 class Book < ActiveRecord::Base
+  has_many :order_items
+
+  default_scope { where(active: true) }
   searchkick autocomplete: ['name']
   has_attached_file :asset,
     :styles => {

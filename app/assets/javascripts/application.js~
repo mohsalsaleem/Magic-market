@@ -16,8 +16,15 @@
 //= require bootstrap-sprockets
 //= require typeahead.bundle
 //= require books
+//= require_addcart
 //= require_tree .
 
+$('#cart-butt').click(function(){
+    $(this).text('Added to cart');
+    $(this).attr('disabled','disabled');
+    alert("hello");
+    console.log('varleye');
+});
 var ready;
 ready = function() {
     console.log('varuthe');
@@ -28,7 +35,7 @@ ready = function() {
         },
         queryTokenizer: Bloodhound.tokenizers.whitespace,
         remote: {
-            url: '../search/autocomplete?query=%QUERY'
+            url: '../search/autocomplete?query=%QUERY',
 	    wildcard: '%QUERY'
         }
     });

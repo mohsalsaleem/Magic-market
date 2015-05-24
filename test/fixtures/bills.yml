@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  promocode: MyString
+  paid: MyString
+  product_id: 
+  orderstatus_id: 
+  user_id: 
+
+two:
+  promocode: MyString
+  paid: MyString
+  product_id: 
+  orderstatus_id: 
+  user_id: 

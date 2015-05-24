@@ -6,6 +6,9 @@ gem "paperclip", "~> 4.2"
 
 gem 'devise'
 gem 'rails_admin'
+gem 'omniauth'
+gem 'omniauth-facebook'
+#gem 'omniauth-google'
 
 gem 'bootstrap-sass', '~> 3.3.4'
 gem 'autoprefixer-rails'

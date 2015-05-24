@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
  
-  get 'cart/show'
 
+  resources :bills
   authenticate :admin do
  	 mount RailsAdmin::Engine => '/magic_market_admin', as: 'rails_admin'
   end
   devise_for :admins
   devise_for :users
   resources :books
+  resource :cart, only: [:show]
+  resources :order_items, only: [:create, :update, :destroy]
   root 'homepage#home'
   get 'search', to: 'search#search'
   resources :search do
@@ -15,7 +17,7 @@ Rails.application.routes.draw do
 	    get :autocomplete
 	  end
   end
-  match 'add', to:'cart#add', via: [:post]
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

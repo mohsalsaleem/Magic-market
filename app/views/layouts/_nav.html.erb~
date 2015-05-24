@@ -8,12 +8,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#page-top"><img class="img-responsive" alt="MagicMarket" style="height:60px" src="assets/pna.png" ></a>
+            <a class="navbar-brand" href="#page-top"><img class="img-responsive" alt="MagicMarket" style="height:60px" src="assets/pn.png" ></a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
 		<% if user_signed_in? %>
+		  <li><%= link_to "#{current_order.order_items.size} Items in Cart ( #{number_to_currency current_order.subtotal} )", cart_path, class: "btn btn-link" %></li>
 		  <li><%= link_to 'Edit account', edit_user_registration_path %></li>
 		  <li><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete' %></li>
 		<% else %>

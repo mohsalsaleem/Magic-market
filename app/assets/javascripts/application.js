@@ -16,7 +16,9 @@
 //= require bootstrap-sprockets
 //= require typeahead.bundle
 //= require books
+//= require_addcart
 //= require_tree .
+
 
 var ready;
 ready = function() {

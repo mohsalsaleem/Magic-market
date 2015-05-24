@@ -1,0 +1,5 @@
+
+function cartClicked() {
+    document.getElementById("cart-butt").value = "Added to cart";
+    alert("added to cart");
+}
