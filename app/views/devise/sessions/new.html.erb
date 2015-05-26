@@ -10,7 +10,8 @@
 						<% end -%>	
 						</div>
 						<br>
-						<button class="btn btn-block btn-primary">Sign in with facebook</button>
+						<%= button_to 'Facebook',user_omniauth_authorize_path("facebook"), class:'btn btn-block btn-primary' %>
+						<!--button class="btn btn-block btn-primary">Sign in with facebook</button-->
 					
 						<hr> 
 						<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>

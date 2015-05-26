@@ -6,7 +6,8 @@ Rails.application.routes.draw do
  	 mount RailsAdmin::Engine => '/magic_market_admin', as: 'rails_admin'
   end
   devise_for :admins
-  devise_for :users
+  #devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
   resources :books
   resource :cart, only: [:show]
   resources :order_items, only: [:create, :update, :destroy]
