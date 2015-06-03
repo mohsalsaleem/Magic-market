@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
  
 
+  get 'payment/pay'
+
+  get 'payment/pay'
+
+  get 'order_summary/show'
+
+  resources :delivery_addresses
+  match 'set_address', to: 'delivery_addresses#set_as_delivery_address', via: :post
   resources :bills
   authenticate :admin do
  	 mount RailsAdmin::Engine => '/magic_market_admin', as: 'rails_admin'

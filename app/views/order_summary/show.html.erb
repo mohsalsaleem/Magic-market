@@ -1,0 +1,20 @@
+<h1>Order Summary</h1>
+
+<% @current_order_items.each do |coi| %>
+	Name: <%= coi.book.name %><br>
+	Quantity: <%= coi.quantity.to_i %><br>
+	Price: <%= coi.unit_price*coi.quantity.to_i %><br>
+	<strong>----------------------------------------------------------------------</strong><br>
+<%end%>
+
+Total: Rs.<%= @total_price %>
+
+<h1>Delivery Address</h1>
+
+<% @order_delivery_address.each_pair do |key,value| %>
+	<% if key!="created_at" && key!="updated_at" %>
+	<%= key.capitalize %> : <%= value %> <br>
+	<%end%>
+<%end%>
+
+<%= button_to 'Go to payment', payment_pay_path, class: "btn btn-primary" , method: :get%>

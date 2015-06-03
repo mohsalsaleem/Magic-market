@@ -66,8 +66,8 @@
                             <span class="glyphicon glyphicon-shopping-cart"></span>
                         </button></td>
                         <td>
-                        <button type="button" class="btn btn-success">
-                            Checkout <span class="glyphicon glyphicon-play"></span>
+                        <!--button type="button" class="btn btn-success"-->
+                            <%= button_to 'Checkout', delivery_addresses_path, method: :get ,class: "btn btn-success" %> <span class="glyphicon glyphicon-play"></span>
                         </button></td>
                     </tr>
                 </tbody>

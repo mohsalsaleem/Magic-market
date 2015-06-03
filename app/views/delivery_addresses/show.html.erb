@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @delivery_address.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @delivery_address.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @delivery_address.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @delivery_address.state %>
+</p>
+
+<p>
+  <strong>Pincode:</strong>
+  <%= @delivery_address.pincode %>
+</p>
+
+<p>
+  <strong>Phoneno:</strong>
+  <%= @delivery_address.phoneno %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @delivery_address.user %>
+</p>
+
+<%= link_to 'Edit', edit_delivery_address_path(@delivery_address) %> |
+<%= link_to 'Back', delivery_addresses_path %>

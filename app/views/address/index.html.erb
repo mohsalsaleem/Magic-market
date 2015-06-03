@@ -1,0 +1,12 @@
+<% if @user.fullname.nil? %>
+You havent added any address.. please add one.. :-)
+<% else %>
+<h1>Your current shipping address is</h1>
+<%= @user.fullname %><br>
+<%= @user.address %><br>
+<%= @user.city %><br>
+<%= @user.state %><br>
+<%= @user.pincode %><br>
+<%= @user.phoneno %><br>
+<%end%>
+<%= link_to 'Edit', address_edit_path(@user)%>

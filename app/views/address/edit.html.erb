@@ -1,0 +1,9 @@
+@user.fullname
+<%= form_for(@user) do |f| %>
+Name: <%= f.text_field :fullname %><br> 
+Address: <%= f.text_field :address %><br>
+City: <%= f.text_field :city %><br>
+State: <%= f.text_field :state %><br>
+Phone Number: <%= f.text_field :phoneno %><br>
+<%= f.submit %>
+<%end%>

@@ -11,10 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150524105754) do
+ActiveRecord::Schema.define(version: 20150603171552) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "addresses", force: :cascade do |t|
+    t.string   "full_name"
+    t.string   "address_1"
+    t.string   "address_2"
+    t.string   "town_or_city"
+    t.string   "state"
+    t.string   "pincode"
+    t.string   "mobile_number"
+    t.string   "landmark"
+    t.integer  "user_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "addresses", ["user_id"], name: "index_addresses_on_user_id", using: :btree
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -91,6 +107,20 @@ ActiveRecord::Schema.define(version: 20150524105754) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "delivery_addresses", force: :cascade do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "pincode"
+    t.string   "phoneno"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "delivery_addresses", ["user_id"], name: "index_delivery_addresses_on_user_id", using: :btree
+
   create_table "order_items", force: :cascade do |t|
     t.integer  "book_id"
     t.integer  "order_id"
@@ -150,9 +180,11 @@ ActiveRecord::Schema.define(version: 20150524105754) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "addresses", "users"
   add_foreign_key "bills", "books"
   add_foreign_key "bills", "order_statuses"
   add_foreign_key "bills", "users"
+  add_foreign_key "delivery_addresses", "users"
   add_foreign_key "order_items", "books"
   add_foreign_key "order_items", "orders"
   add_foreign_key "orders", "order_statuses"
