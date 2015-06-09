@@ -7,26 +7,26 @@
 	   </div>
 	   <div class="col-md-12"></div>
 	   <div class="col-md-12">	
-            
-                            <div class="input-group">
-				<%= render "search/search_box" %>
-				  
-				  <span class="input-group-addon " id="sizing-addon2"><span class="glyphicon glyphicon-ok"></span></span>	
-			 </div>
-			
-				
-				
-           </div>
-	   <div class="hidden-xs">
-	      <div class="col-md-2 col-md-offset-1 bordered top-buffer">
+             <div class="input-group">
+				<%= render "search/search_box" %>	  
+				  <span class="input-group-addon " id="sizing-addon2"><span class="glyphicon glyphicon-search"></span></span>	
+			 </div>									
+        </div>
+
+	   <div class="hidden-xs col-md-12 ">
+	      <div class="col-md-3  bordered top-buffer col-md-offset-2 grey_transparent">
 			  <div class="col-md-3 col-md-offset-4 top-buffer"><img src="http://www.chegg.com/s/sohp/images/icn-cir-deals-48x48.png"></div>				
-			<div class="col-md-12">			  
-			<h4>Buy Used and New TextBooks<h4>
-			  <h6>Save upto 60% on TextBooks*</h6>
-			</div>
-			 <div class="col-md-3 col-md-offset-4 top-buffer"><a href="#featured"><img src="http://www.chegg.com/s/sohp/images/icn-cir-arrow-24x24.png"></a></div>				
-	      </div>	
-	      <div class="col-md-2 col-md-offset-1 bordered top-buffer">
+				<div class="col-md-12">			  
+				<h4>Buy Used and New TextBooks<h4>
+				  <h6>Save upto 60% on TextBooks*</h6>
+				</div>
+			 	<div class="col-md-3 col-md-offset-4 top-buffer">
+			 		<a href="#featured">
+			 		<img src="http://www.chegg.com/s/sohp/images/icn-cir-arrow-24x24.png">
+			 		</a>
+			 	</div>				
+	      		</div>	
+	      <div class="col-md-3  bordered top-buffer grey_transparent">
 			  <div class="col-md-3 col-md-offset-4 top-buffer"><img src="http://www.chegg.com/s/sohp/images/icn-cir-cheggstudy-48x48.png"></div>				
 			<div class="col-md-12">			  
 			<h4>Sell your old books at your doorstep!<h4>
@@ -34,13 +34,13 @@
 			</div>
 			 <div class="col-md-3 col-md-offset-4 top-buffer"><img src="http://www.chegg.com/s/sohp/images/icn-cir-arrow-24x24.png"></div>				
 	      </div>
-	      <div class="col-md-2 col-md-offset-1 bordered top-buffer">
+	      <div class="col-md-3  bordered top-buffer grey_transparent">
 			  <div class="col-md-3 col-md-offset-4 top-buffer"><img src="http://www.chegg.com/s/sohp/images/icn-cir-cheggstudy-48x48.png"></div>				
 			<div class="col-md-12">			  
 			<h4>Look for the scholarships provided!<h4>
 			  <h6>See the scholarships provided Now!</h6>
 			</div>
-			 <div class="col-md-3 col-md-offset-4 top-buffer"><img src="http://www.chegg.com/s/sohp/images/icn-cir-arrow-24x24.png"></div>				
+			 <div class="col-md-3 col-md-offset-4 top-buffer"><img src="http://www.chegg.com/s/sohp/images/icn-cir-arrow-24x24.png"></div>	
 	      </div>
            </div>
         </div>
@@ -48,11 +48,10 @@
 </header>
 <div class="content-wrapper">
     <section class="primary" id="featured">
+    <hr class="blue_up">
         <div class="fullwidth">
-	    <div class="col-md-12">
-			<hr class="blue_up">
-		</div>
-            <div class="row">
+	   
+            
                 <div class="halfwhite col-md-12">
 		    <div class="top-buffer">
 			<div class="col-md-6 col-md-offset-2">
@@ -73,15 +72,10 @@
 		    </div>
 		</div>
 		
-            </div>
         </div>
     </section>
-    <section class="success" id="about">
-      <div class="fullwidth">
-	    <div class="col-md-12">
-			<hr class="blue_up">
-		</div>
-            <div class="row">
+    <section class="success" id="about">	   
+			<hr class="blue_up">       
                 <div class="halfwhite col-md-12">
 		    <div class="top-buffer">
 			<div class="col-md-6 col-md-offset-2">
@@ -102,16 +96,12 @@
 		    </div>
 		</div>
 		
-            </div>
-        </div>
+   
     </section>
-    <section class="primary" id="contact">
-             <div class="fullwidth">
-	    <div class="col-md-12">
-			<hr class="blue_up">
-		</div>
-            <div class="row">
-                <div class="halfwhite col-md-12">
+    <section class="primary" id="contact">             
+    <hr class="blue_up">
+	    
+        <div class="halfwhite col-md-12">
 		    <div class="top-buffer">
 			<div class="col-md-6 col-md-offset-2">
 				<div class="col-md-1">
@@ -130,9 +120,6 @@
 			</div>
 		    </div>
 		</div>
-		
-            </div>
-        </div>
     </section>
     <%= render 'layouts/footer' %>
 </div>

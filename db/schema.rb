@@ -16,22 +16,6 @@ ActiveRecord::Schema.define(version: 20150603171552) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "addresses", force: :cascade do |t|
-    t.string   "full_name"
-    t.string   "address_1"
-    t.string   "address_2"
-    t.string   "town_or_city"
-    t.string   "state"
-    t.string   "pincode"
-    t.string   "mobile_number"
-    t.string   "landmark"
-    t.integer  "user_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-  end
-
-  add_index "addresses", ["user_id"], name: "index_addresses_on_user_id", using: :btree
-
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -180,7 +164,6 @@ ActiveRecord::Schema.define(version: 20150603171552) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
-  add_foreign_key "addresses", "users"
   add_foreign_key "bills", "books"
   add_foreign_key "bills", "order_statuses"
   add_foreign_key "bills", "users"

@@ -1,8 +1,11 @@
+.grey_transparent{
+  background:rgba(255,255,255,0.5);
+}
 .nav_color {
 	background-color: #49bfe3;
 }
 .blue_up {
-	display: block; height: 5px;
+	display: block; height: 0px;
     border: 0; border-top: 5px solid #49bfe3;
     margin: 0em 0; padding: 0;
 }
@@ -10,9 +13,9 @@
 	background-color: rgba(255, 255, 255, 0.8);
 	padding-bottom: 20px;
 }
-.fullwidth {
-	width:100%;
-}
+/*.fullwidth {
+	width:90%;
+}*/
 #featured {
     background-image: url('secondimage.jpg'); 
     padding-top: 0;

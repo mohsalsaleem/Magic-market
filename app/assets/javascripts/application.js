@@ -43,7 +43,7 @@ ready = function() {
 
     $('.typeahead').typeahead(null, {
         name: 'engine',
-        displayKey: 'title',
+        displayKey: 'name',
         source: engine.ttAdapter()
     });
     console.log('varleye');
